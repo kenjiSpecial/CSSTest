@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>test_css03</title>
+    <style type="text/css">
+
+            /*------------------*/
+            /* header01 */
+
+        div#header01 {
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+
+        div#header01 img {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            transition: all 2s;
+            -moz-transition: all 2s; /* Firefox 4 */
+            -webkit-transition: all 2s; /* Safari and Chrome */
+            -o-transition: all 2s; /* Opera */
+
+        }
+
+        div#header01 img:hover {
+
+            transform: skew(30deg, 20deg);
+            -ms-transform: skew(30deg, 20deg); /* IE 9 */
+            -webkit-transform: skew(30deg, 20deg); /* Safari and Chrome */
+            -o-transform: skew(30deg, 20deg); /* Opera */
+            -moz-transform: skew(30deg, 20deg); /* Firefox */
+        }
+
+            /*------------------*/
+            /* header02 */
+        div#header02 {
+            position: relative;
+            top: 700px;
+            left: 100px;
+        }
+
+        div#header02 img {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            : myfirst 5s;
+            -moz-animation: myfirst 5s; /* Firefox */
+            -webkit-animation: myfirst 5s; /* Safari and Chrome */
+            -o-animation: myfirst 5s; /* Opera */
+        }
+
+        @keyframes myfirst
+        {
+        from {skew(30deg, 20deg);}
+        to {skew(30deg, 20deg);}
+        }
+
+        @-moz-keyframes myfirst /* Firefox */
+        {
+        from {skew(30deg, 20deg);}
+        to {skew(30deg, 20deg);}
+        }
+
+        @-webkit-keyframes myfirst /* Safari and Chrome */
+        {
+          from {skew(30deg, 20deg);}
+        to {skew(30deg, 20deg);}
+        }
+
+        @-o-keyframes myfirst /* Opera */
+        {
+        from {skew(30deg, 20deg);}
+        to {skew(30deg, 20deg);}
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+<div id="header01">
+    <!--<img src="js_img/HG.jpg" alt="">-->
+    <img src="js_img/backimg.png" alt="">
+</div>
+
+<div id="header02">
+    <img src="js_img/backimg.png" alt="">
+</div>
+
+</body>
+</html>

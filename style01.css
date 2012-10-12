@@ -1,0 +1,55 @@
+h1 {
+    font-size: 24px;
+
+    animation: slidein 1s;
+    -moz-animation: slidein 1s; /* Firefox */
+    -webkit-animation: slidein 1s; /* Safari and Chrome */
+    -o-animation: slidein 1s; /* Opera */
+
+    color: #000;
+}
+
+
+@keyframes slidein{
+  from {
+    margin-left: 100%;
+    color: #fff;}
+
+
+  to {
+    margin-left: 0%;
+    color: #000;}
+}
+
+@-moz-keyframes slidein{
+  from {
+    margin-left: 100%;
+    color: #fff;
+    }
+
+  to {
+    margin-left: 0%;
+    color: #000;}
+}
+
+@-webkit-keyframes slidein{
+    from {
+    margin-left: 100%;
+    color: #fff;}
+
+  to {
+    margin-left: 0%;
+    color: #000;}
+}
+
+@-o-keyframes slidein /* Opera */
+{
+    from {
+    margin-left: 100%;
+    color: #fff;}
+
+  to {
+    margin-left: 0%;
+    color: #000;}
+}
+
