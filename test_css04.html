@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>test_css03</title>
+    <style type="text/css">
+
+            /*------------------*/
+            /* header01 */
+
+        div#header01 {
+            position: relative;
+            top: 100px;
+            left: 100px;
+
+            width: 1000px;
+            height: 520px;
+            /*overflow: hidden;*/
+        }
+
+        div#header01 img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        img#frontImage{
+            position: absolute;
+
+            left: 159px !important;
+
+            transition: all 1s;
+            -moz-transition: all 1s; /* Firefox 4 */
+            -webkit-transition: all 1s; /* Safari and Chrome */
+            -o-transition: all 1s; /* Opera */
+
+        }
+
+        img.over{
+            transform: skew(90deg, 90deg);
+            -ms-transform: skew(90deg, 90deg); /* IE 9 */
+            -webkit-transform: skew(90deg, 90deg); /* Safari and Chrome */
+            -o-transform: skew(90deg, 90deg); /* Opera */
+            -moz-transform: skew(90deg, 90deg); /* Firefox */
+        }
+
+        img#frontBackImage{
+            display: none;
+
+            top: -600px;
+
+            transition: all 1s;
+            -moz-transition: all 1s; /* Firefox 4 */
+            -webkit-transition: all 1s; /* Safari and Chrome */
+            -o-transition: all 1s;
+        }
+
+        img.display{
+
+            transform: translate(0, 0);
+            -ms-transform: translate(0, 0); /* IE 9 */
+            -webkit-transform: translate(0, 0); /* Safari and Chrome */
+            -o-transform: translate(0, 0); /* Opera */
+            -moz-transform: translate(0 ,0); /* Firefox */
+        }
+
+        div#imgWord{
+            width: 1000px;
+            height: 520px;
+            overflow: hidden;
+
+            top: 0;
+        }
+
+        div#imgWord img{
+            top: 0;
+        }
+
+
+        a#link_test img{
+            overflow: hidden;
+
+            transition: top 1s,  opacity 1s;
+            -moz-transition: top 1s,  opacity 1s; /* Firefox 4 */
+            -webkit-transition: top 1s, opacity 1s; /* Safari and Chrome */
+            -o-transition: top 1s, opacity 1s;
+        }
+
+        img.changeWord{
+            top: 200px!important;
+            opacity: 0;
+        }
+
+        div.hideclass{
+            display: none;
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/normalize.css">
+
+</head>
+<body>
+<div id="header01">
+
+
+    <img src="js_img/HG.jpg" alt="" id="backImage">
+    <img src="js_img/Video.png" id="frontBackImage" alt="" class="display">
+    <img src="js_img/frontImg.png" id="frontImage" alt="">
+    <div id="imgWord"><a href="#" id="link_test"><img src="js_img/HL.png" alt=""  ></a></div>
+
+
+</div>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+
+    $("a#link_test").click(function () {
+        $("img#frontImage").addClass("over");
+        setTimeout(addImage, 1000);
+        setTimeout(delImage, 1000);
+
+        function delImage(){
+            $("img#frontImage").css("display", "none");
+            $("div#imgWord").addClass("hideclass");
+        }
+
+        function addImage(){
+            $("img#frontBackImage").css("display", "block")
+        }
+
+        $("a#link_test img").addClass("changeWord");
+
+
+
+
+
+        return false;
+    });
+</script>
+
+</body>
+</html>
